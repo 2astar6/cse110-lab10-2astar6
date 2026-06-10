@@ -64,17 +64,15 @@
      if (shouldApplyClass) {
           body.classList.add('blue');
      }
-    // Push an event indicating the final state
-    window.dataLayer.push({
-      event: 'body_class_set',
-      blueApplied: shouldApplyClass
-    });
-  
-    // Announce a follow-up event after 5 seconds
+    // Announce event after 5 seconds
     setTimeout(() => {
       window.dataLayer.push({
         event: 'body_class_announced',
         blueApplied: shouldApplyClass,
+      });
+      console.log('Event pushed:', {
+        event: 'body_class_announced',
+        blueApplied: shouldApplyClass
       });
     }, 5000);
   </script>
