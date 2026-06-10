@@ -54,17 +54,17 @@
     </section>
   </main>
   <script>
-     // Generate a random number between 0 and 1
+     // generate a random number (between 0 and 1)
      const randomNumber = Math.random();
-     // Determine if the class should be applied
+     // determine if class should be applied
      const shouldApplyClass = randomNumber < 0.5;
-     // Get the body element
+     // get `body` element
      let body = document.querySelector('body');
-     // Apply or remove the "blue" class based on the random number
+     // apply or remove the "blue" class based on the random number
      if (shouldApplyClass) {
           body.classList.add('blue');
      }
-    // Announce event after 5 seconds
+    // announce event after 30s (30,000ms)
     setTimeout(() => {
       window.dataLayer.push({
         event: 'body_class_announced',
@@ -74,7 +74,7 @@
         event: 'body_class_announced',
         blueApplied: shouldApplyClass
       });
-    }, 5000);
+    }, 30000);
   </script>
 </body>
 
