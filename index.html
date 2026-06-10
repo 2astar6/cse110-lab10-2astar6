@@ -64,7 +64,8 @@
      if (shouldApplyClass) {
           body.classList.add('blue');
      }
-    // announce event after 30s (30,000ms)
+    // announce event after 30s/30,000ms 
+    // (this was added since GTM had hard time reading direct DOM events with my browser's shields, so I changed to DataLayer events to get actual analytics)
     setTimeout(() => {
       window.dataLayer.push({
         event: 'body_class_announced',
